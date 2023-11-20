@@ -1,9 +1,7 @@
 from django.urls import path
-from django.http import HttpResponse
-
-def view_inicio(request):
-    return HttpResponse("Hola mundo")
+from AppCoder import views
 
 urlpatterns = [
-    path('inicio/', view_inicio),
+    path('inicio/', views.inicio_view),
+    path('cursos/', views.cursos_view),
 ]
